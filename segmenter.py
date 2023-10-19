@@ -19,7 +19,7 @@ def split_audio(input_file, output_folder, segment_duration=25):
         segment.export(output_file, format="mp3")
 
 if __name__ == "__main__":
-    input_file = "someenglishswahili.mp3"  # Change this to your audio file path
+    input_file = "/home/wambugumuchemi/Projects/listen-write/helloeeey.mp3"  # Change this to your audio file path
     output_folder = "./audiobank"  # Change this to your desired output folder
 
     # Create the output folder if it doesn't exist
