@@ -33,6 +33,7 @@ def main():
 
     # Loop through audio files in the folder and transcribe each segment
     for file_name in os.listdir(audio_folder):
+        print("workin on",file_name)
         if file_name.endswith(".mp3"):
             audio_path = os.path.join(audio_folder, file_name)
             transcribe_and_append(model, audio_path, output_file)

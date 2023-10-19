@@ -14,12 +14,22 @@ def split_audio(input_file, output_folder, segment_duration=25):
         # Extract the segment
         segment = audio[start_time:end_time]
 
-        # Save the segment
-        output_file = f"{output_folder}/segment_{i + 1}.mp3"
-        segment.export(output_file, format="mp3")
+        # # Save the segment in mp3
+        # output_file = f"{output_folder}/segment_{i + 1}.mp3"
+        # segment.export(output_file, format="mp3")
+
+        # Save the segment in wav
+        output_file = f"{output_folder}/segment_{i + 1}.wav"
+        segment.export(output_file, format="wav")
+    
+    # Handle the last segment (if any)
+    if end_time < len(audio):
+        last_segment = audio[end_time:]
+        output_file = f"{output_folder}/segment_{num_segments + 1}.wav"
+        last_segment.export(output_file, format="wav")
 
 if __name__ == "__main__":
-    input_file = "/home/wambugumuchemi/Projects/listen-write/helloeeey.mp3"  # Change this to your audio file path
+    input_file = "/home/wambugumuchemi/Projects/listen-write/only_speech.wav"  # Change this to your audio file path
     output_folder = "./audiobank"  # Change this to your desired output folder
 
     # Create the output folder if it doesn't exist
