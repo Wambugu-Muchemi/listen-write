@@ -19,3 +19,15 @@ Hello. Hello, good morning. Morning to you. Yeah, I wanted your help. Yeah. I ne
 File: segment_2.mp3 (Language: sw):
 Kwa kwaidi gani? Ni kuzima wanu Nambo ni log inae kwa konti yako ni gani? Kaki nambayo ni? Nambayo ni log inae kwa konti yako ni gani? Nijiro one one three One one three Three four zero three Three four zero three One eight One eight
 
+File: segment_3.mp3 (Language: sw):
+Kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mb
+
+File: segment_11.mp3 (Language: en):
+and O C like zero C. Then E F. C for cat.
+
+File: segment_6.mp3 (Language: sw):
+Kuna Advanced Settings, kuna magini njawe ni wakona netwaku Hakuna place unohona wifi na kutama network information Kuna 2MEN, kuna Connect, kuna mgini wajina Ebufi nya koko ya Connect
+
+File: segment_5.mp3 (Language: sw):
+Kwa netwark unawona nini? Kuna netwark configuration, kuna internet connection. Nako kwa netwark configuration ifungua apo. Okay. Unawona nini? Hibi kuja nini, kuja connect, kuja kuja netwark. Connection type. Uh huh.
+
