@@ -1,33 +1,3 @@
-File: segment_4.mp3 (Language: sw):
-Makati ni kainia, so kizhiwe kutaa Okay, nina kumbia Makati, kizhiwe kizhiwe nijua Makati Haa, itiniwakite Unolojienda kwa Kwa setting Kwa setting Then network Network
-
-File: segment_8.mp3 (Language: en):
-I have a... I don't know. I have a little consideration. I have internet connection. I work on wireless network. I work on 10 a.m.
-
-File: segment_10.mp3 (Language: en):
-E F C F C C F C uh huh close okay 18 E F small letter T for elephant F C F T T A T F T A
-
-File: segment_7.mp3 (Language: my):
-MZN-1 ನಾಕರಣಾಕರಣಾಕರಣಾಕರಣಾಕರಣಾಕರಣಾಕರಣಾಕರಣಾಕರಣಾಕರಣಾಕರಣಾಕರಣಾಕರಣಾಕರಣಾಕರಣಾಕರಣಾಕರಣಾಕರ�
-
-File: segment_9.mp3 (Language: en):
-Now, you can see the connection status. Now, you can see the connection status. Now, you can see the connection status. Now, you can see the connection status.
-
-File: segment_1.mp3 (Language: en):
-Hello. Hello, good morning. Morning to you. Yeah, I wanted to ask for your help. Yeah. I subscribed you at one time, but I subscribed when I was working. Okay, do you work in Ghana? Yes, I do. Okay, so you live in Ghana? Yes.
-
-File: segment_2.mp3 (Language: my):
-เ็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็
-
-File: segment_3.mp3 (Language: sw):
-Kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, k
-
-File: segment_11.mp3 (Language: en):
-and all C's, like zero C's. Then C F, C for pass, has minus 48.
-
-File: segment_6.mp3 (Language: sw):
-Kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, k
-
-File: segment_5.mp3 (Language: sw):
-Kwa netwaka unahona ni? Tuna netwaka configuration, tunahitana connection Nako kwa netwaka configuration, kinguako Okay Unahona ni? Kwa hivyo kuja ni, kuja connect, kuja netwaka Connection type Uh huh
+File: segment_1.wav (Language: sw):
+Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu
 

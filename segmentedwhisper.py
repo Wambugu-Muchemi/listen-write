@@ -26,7 +26,7 @@ def transcribe_and_append(model, audio_path, output_file):
 def main():
     model = whisper.load_model("large")
     audio_folder = "/home/wambugumuchemi/Projects/listen-write/audiobank"
-    output_file = "/home/wambugumuchemi/Projects/listen-write/audiokon4.txt"
+    output_file = "/home/wambugumuchemi/Projects/listen-write/audiokon2.txt"
 
     # Ensure the output file is empty
     open(output_file, 'w').close()
