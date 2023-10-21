@@ -32,9 +32,13 @@ def main():
     open(output_file, 'w').close()
 
     # Loop through audio files in the folder and transcribe each segment
-    for file_name in os.listdir(audio_folder):
+    # Get a list of all WAV files in the folder and sort them
+    audio_files = [file_name for file_name in os.listdir(audio_folder) if file_name.endswith(".wav")]
+    audio_files.sort()
+    #for file_name in os.listdir(audio_folder):
+    for file_name in audio_files:
         print("workin on",file_name)
-        if file_name.endswith(".mp3"):
+        if file_name.endswith(".wav"):
             audio_path = os.path.join(audio_folder, file_name)
             transcribe_and_append(model, audio_path, output_file)
 

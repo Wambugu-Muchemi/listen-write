@@ -61,7 +61,7 @@ def apply_silero_vad(input_path, output_path):
     # Export the VAD-processed audio to a new file
     vad_audio.export(output_path, format="mp3")
 
-audio_path = "/home/wambugumuchemi/Projects/listen-write/helloeeey.mp3"
+audio_path = "/home/wambugumuchemi/Projects/listen-write/only_speech.wav"
 output_path = "/home/wambugumuchemi/Projects/listen-write/cleaned_audio/clean1.mp3"
 
 clean_audio_advanced(audio_path, output_path)
