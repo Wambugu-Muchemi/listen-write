@@ -23,7 +23,7 @@ def store_transcription_in_sqlite(source_url, transcription, date, summary, db_p
     # Insert data into the transcriptions table
     conn.execute('''
         INSERT INTO transcriptions (source_url, transcription, date, summary)
-        VALUES (?, ?)
+        VALUES (?, ?, ?, ?)
     ''', (source_url, transcription, date, summary))
 
     # Commit changes and close the connection
