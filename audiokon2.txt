@@ -1,3 +1,6 @@
-File: segment_1.wav (Language: sw):
-Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu? Mambu
+File: segment_1.wav (Language: en):
+Smoke from hundreds of wildfires in Canada is triggering air quality alerts throughout the U.S. Skylines from Maine to Maryland to Minnesota are gray and smoggy. And in some places, the air quality warnings include the warning to stay inside. We wanted to better understand what's happening here and why, so we called Peter DiCarlo, an associate professor in the Department of Environmental Health and Engineering at Johns Hopkins University. Good morning, Professor DiCarlo. Thank you for joining us. Thank you for having me. I'm so glad to be here. I'm so glad to be here.
+
+File: segment_10.wav (Language: en):
+US getting hit right now is a little bit new. But yeah, I think with climate change moving forward this is something that's going to happen more frequently. That's Peter DeCarlo, Associate Professor in the Department of Environmental Health and Engineering at Johns Hopkins University. Professor DeCarlo, thanks so much for joining us and sharing this expertise with us. Thank you for having me.
 

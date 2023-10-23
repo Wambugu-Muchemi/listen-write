@@ -29,7 +29,8 @@ def split_audio(input_file, output_folder, segment_duration=25):
     if len(last_segment) > 0:
         output_file = f"{output_folder}/segment_{num_segments + 1}.wav"
         last_segment.export(output_file, format="wav")
-if __name__ == "__main__":
+
+def segmentorun():
     input_file = "/home/wambugumuchemi/Projects/listen-write/only_speech.wav"  # Change this to your audio file path
     output_folder = "./audiobank"  # Change this to your desired output folder
 
@@ -37,3 +38,13 @@ if __name__ == "__main__":
     #os.makedirs(output_folder, exist_ok=True)
 
     split_audio(input_file, output_folder, segment_duration=25)
+
+if __name__ == "__main__":
+    # input_file = "/home/wambugumuchemi/Projects/listen-write/only_speech.wav"  # Change this to your audio file path
+    # output_folder = "./audiobank"  # Change this to your desired output folder
+
+    # # Create the output folder if it doesn't exist
+    # #os.makedirs(output_folder, exist_ok=True)
+
+    # split_audio(input_file, output_folder, segment_duration=25)
+    segmentorun()

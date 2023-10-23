@@ -1,5 +1,7 @@
 import os
 import whisper
+from segmenter import *
+from cleanaudio import *
 
 def transcribe_and_append(model, audio_path, output_file):
     with open(output_file, 'a') as f:
@@ -23,7 +25,9 @@ def transcribe_and_append(model, audio_path, output_file):
         f.write(f"File: {os.path.basename(audio_path)} (Language: {detected_language}):\n")
         f.write(transcription + '\n\n')
 
-def main():
+def main():  
+    silerovadit('https://github.com/AssemblyAI-Examples/audio-examples/raw/main/20230607_me_canadian_wildfires.mp3')
+    segmentorun()
     model = whisper.load_model("large")
     audio_folder = "/home/wambugumuchemi/Projects/listen-write/audiobank"
     output_file = "/home/wambugumuchemi/Projects/listen-write/audiokon2.txt"
@@ -41,6 +45,7 @@ def main():
         if file_name.endswith(".wav"):
             audio_path = os.path.join(audio_folder, file_name)
             transcribe_and_append(model, audio_path, output_file)
+            os.remove(f"./audiobank/{file_name}")
 
 if __name__ == "__main__":
     main()

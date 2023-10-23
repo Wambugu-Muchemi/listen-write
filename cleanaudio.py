@@ -2,6 +2,8 @@ from pydub import AudioSegment
 import noisereduce as nr
 import numpy as np
 import silero
+from pydub import AudioSegment
+from IPython.display import Audio
 
 #import librosa
 def cleansimple():
@@ -61,7 +63,62 @@ def apply_silero_vad(input_path, output_path):
     # Export the VAD-processed audio to a new file
     vad_audio.export(output_path, format="mp3")
 
-audio_path = "/home/wambugumuchemi/Projects/listen-write/only_speech.wav"
-output_path = "/home/wambugumuchemi/Projects/listen-write/cleaned_audio/clean1.mp3"
+# audio_path = "/home/wambugumuchemi/Projects/listen-write/only_speech.wav"
+# output_path = "/home/wambugumuchemi/Projects/listen-write/cleaned_audio/clean1.mp3"
 
-clean_audio_advanced(audio_path, output_path)
+# clean_audio_advanced(audio_path, output_path)
+
+
+#Lets first convert mp3 to wav
+
+def mp3converter(audiopath):
+    sound = AudioSegment.from_mp3(audiopath)
+    sound.export( "en_example.wav", format="wav")
+    return "en_example.wav"
+
+    
+#Audio("en_example.wav")
+def silerovadit(audiopath):
+    SAMPLING_RATE = 16000
+    import torch
+    torch.set_num_threads(1)
+
+    from IPython.display import Audio
+    from pprint import pprint
+    # download example
+    #torch.hub.download_url_to_file('https://models.silero.ai/vad_models/en.wav', 'en_example.wav')
+    torch.hub.download_url_to_file(audiopath, 'en_example.mp3')
+    #audio_file = "/home/wambugumuchemi/Projects/listen-write/audio.wav"
+    #torch.hub.download_url_to_file('https://www.voiptroubleshooter.com/open_speech/american/OSR_us_000_0010_8k.wav', 'en_example.wav')
+
+    audio = "en_example.mp3"
+    mp3converter(audio)
+
+    #Audio('en_example.wav')
+    USE_ONNX = False # change this to True / False if you want to test onnx model
+    if USE_ONNX:
+        #%pip install -q onnxruntime
+        print("Test feature, use this on ipynb")
+    
+    model, utils = torch.hub.load(repo_or_dir='snakers4/silero-vad',
+                                model='silero_vad',
+                                force_reload=True,
+                                onnx=USE_ONNX)
+
+    (get_speech_timestamps,
+    save_audio,
+    read_audio,
+    VADIterator,
+    collect_chunks) = utils
+
+    wav = read_audio('en_example.wav', sampling_rate=SAMPLING_RATE)
+    #wav = read_audio("/home/wambugumuchemi/Projects/listen-write/audio.wav", sampling_rate=SAMPLING_RATE)
+    # get speech timestamps from full audio file
+    speech_timestamps = get_speech_timestamps(wav, model, sampling_rate=SAMPLING_RATE)
+    pprint(speech_timestamps)
+
+    # merge all speech chunks to one audio
+    save_audio('only_speech.wav',
+            collect_chunks(speech_timestamps, wav), sampling_rate=SAMPLING_RATE) 
+    #Audio('only_speech.wav')
+
