@@ -46,7 +46,9 @@ def apply_silero_vad(input_path, output_path):
     sample_rate = audio.frame_rate
 
     # Initialize Silero VAD
+
     vad = silero.Vad(device = 'cpu')
+    
     #vad = SileroVAD(device='cpu')  # You can specify 'cuda' if you have a GPU
 
     # Apply VAD to the raw PCM data
