@@ -2,6 +2,7 @@ import os
 import whisper
 from segmenter import *
 from cleanaudio import *
+from storage import *
 
 def transcribe_and_append(model, audio_path, output_file):
     with open(output_file, 'a') as f:
@@ -26,11 +27,12 @@ def transcribe_and_append(model, audio_path, output_file):
         f.write(transcription + '\n\n')
 
 def main():  
-    silerovadit('https://github.com/AssemblyAI-Examples/audio-examples/raw/main/20230607_me_canadian_wildfires.mp3')
+    source_url = input("Enter your transcription url: ")
+    silerovadit(source_url)
     segmentorun()
     model = whisper.load_model("large")
     audio_folder = "/home/wambugumuchemi/Projects/listen-write/audiobank"
-    output_file = "/home/wambugumuchemi/Projects/listen-write/audiokon2.txt"
+    output_file = "/home/wambugumuchemi/Projects/listen-write/audiokon.txt"
 
     # Ensure the output file is empty
     open(output_file, 'w').close()
@@ -46,6 +48,18 @@ def main():
             audio_path = os.path.join(audio_folder, file_name)
             transcribe_and_append(model, audio_path, output_file)
             os.remove(f"./audiobank/{file_name}")
+    
+    transcription = ""
+
+    # redefine TXT file
+    txt_file_path = "/home/wambugumuchemi/Projects/listen-write/audiokon.txt"
+
+    # Read the contents of the TXT file
+    with open(txt_file_path, "r") as file:
+        transcription = file.read()
+
+    #store on db
+    store_transcription_in_sqlite(source_url, transcription)
 
 if __name__ == "__main__":
     main()

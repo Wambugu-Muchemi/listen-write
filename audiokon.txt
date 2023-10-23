@@ -1,33 +1,24 @@
-File: segment_4.mp3 (Language: sw):
-Kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa k
+File: segment_1.wav (Language: sw):
+Hello? Hello? Kwela ni aje? Kweti sana Haa, nimelepai connect henu na bada itirirudishi Nimelepata meseji mpesa na bada ikonect Nimelepata nime... nini meseji baati jako pachani tweku badu? Haa Device inaituwa jesimu, tv, laptop? Haa, nisimu tu Ndaka wa chrome Uh huh Kuantika jina fast.com, fastileaaraka Lafuki site, tabupima speed na inakupachani tweku sasa Kwa chini ndaka wa chrome niandika fast.com
 
-File: segment_8.mp3 (Language: sw):
-Kuna nini? Njuma. Kuna make up configuration. Kuna internet connection. Kuna work on wireless make up. Kuna work on LAN.
+File: segment_2.wav (Language: sw):
+FAST
 
-File: segment_10.mp3 (Language: en):
-E F Cassie, Cassie, Cassie Okay, 18 E F Small letters P for elephant F Cassie 3 F 3 A
+File: segment_3.wav (Language: sw):
+Ebu ujarebu unyambia Niii No internet connection, hivyo nje nambia Ungefungu kwa chrome? Heee, nikuwa kwa chrome, nimaandika Nime already na nyamu Ok, andika jinafast.com pale place ya kutype Na kusajja fast ya F-A-S-T Jaa, nimaandika, bata akuna kitu nakamu Yuu, screen niko blanco Uliko ume shade out muanzo before uanzo kwa andika Fanya hivi, enda kwa neto kuforgete Neto klafu kwa next tena na urudu wa andike jinafast.com Kwa F-A-S-T Kwa sababu, nyata kati
 
-File: segment_7.mp3 (Language: sw):
-Kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, k
+File: segment_4.wav (Language: sw):
+iload, lafu ipinexpress alafu nambiwa thanks for purchasing next plan add this device to your subscription so sa njia, ini nijani kena jini mekatatekia konect teno? kama basi imekuletayo ya konect, rudu kulele poto liya kulipa alafu wande uguze yu subscription ya green pale kuwa add the device pa. so ni rudu kwa konect kapu madhya kulipa ebu hold shuki ya kistoke please kini zitena nigaidi
 
-File: segment_9.mp3 (Language: sw):
-Sabuki ni kapo kwa internet connection Nimefuja connection text, text ama network information Network information Nimefuja IP address MAC address MAC address nimefuja 18 Ok, unisame tarakibu 18
+File: segment_5.wav (Language: sw):
+Nipambuzi. Nimenda kwa add device na niletea select adding mode this device marks juzi tugani. Yutunja yipa wapuna kipya green. Ebu refresh yo page scroll screen kama ntaramsha chini. Nita refresh lafu ya ta kuletea yu ya green nina kwelezi. Ilike ilimeloagot kwan? Haa ni Y05G ni. Ok guza hiyo sasa. Laku mark address ni gani? Mark address ni pale kwa this.
 
-File: segment_1.mp3 (Language: en):
-Hello. Hello, good morning. Morning to you. Yeah, I wanted your help. Yeah. I need you to subscribe. You have one hand, but some devices are not working. Okay, device is not working? Your TV. Okay, TV is not working. You need to high five.
+File: segment_6.wav (Language: sw):
+Kwa this device nakuweleza aji? Apo kwa adding mode? Apa kuna new device Apa ana gyi yake? Sasa najabu kuguza hii this device IOS Ume connect na bundle na manetwork ingine? Nikotuwa ni nye, sijaguza bundle Nikotuwa ni nye Sasa itabidi uwendu tafte makardusi yake Manual, so tafanya hivi Mutarudi kwa setting kule kwa network Yoya connect
 
-File: segment_2.mp3 (Language: sw):
-Kwa kwaidi gani? Ni kuzima wanu Nambo ni log inae kwa konti yako ni gani? Kaki nambayo ni? Nambayo ni log inae kwa konti yako ni gani? Nijiro one one three One one three Three four zero three Three four zero three One eight One eight
+File: segment_7.wav (Language: sw):
+Kwa kanda haki kuna pati mandiku imej choro yo icon ya setting Ukiguza hapo, kini mwisho kuna pati mandiku wa mark address So unandika yu kwa kartasi la funa kujo unayeka pale kwa new device mark Nifundi kwa, hee niku sasa kwa internet clamps na device na chenji Na ikoni yenda wapi mbya kutake yu? Hapana, asa unarudu yu nyuma kabisa kwa setting ya network Setting, wifi zenziku available Oh, kwa... Goda
 
-File: segment_3.mp3 (Language: sw):
-Kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mbili, kwa hivyo mb
-
-File: segment_11.mp3 (Language: en):
-and O C like zero C. Then E F. C for cat.
-
-File: segment_6.mp3 (Language: sw):
-Kuna Advanced Settings, kuna magini njawe ni wakona netwaku Hakuna place unohona wifi na kutama network information Kuna 2MEN, kuna Connect, kuna mgini wajina Ebufi nya koko ya Connect
-
-File: segment_5.mp3 (Language: sw):
-Kwa netwark unawona nini? Kuna netwark configuration, kuna internet connection. Nako kwa netwark configuration ifungua apo. Okay. Unawona nini? Hibi kuja nini, kuja connect, kuja kuja netwark. Connection type. Uh huh.
+File: segment_8.wav (Language: sw):
+Kwa hivyo kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa
 
