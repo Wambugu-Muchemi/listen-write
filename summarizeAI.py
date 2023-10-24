@@ -17,7 +17,7 @@ def escribirAI(transcription):
     llm = OpenAI()
     qa_chain = load_qa_chain(llm, chain_type="stuff")
     summary = qa_chain.run(input_documents=[doc],  
-                      question="This is a transcription made from a customer care call at Konnect Wifi ISP , please try to summarize what is going on in English. Please note, the transcription was made using Whisper and some parts may seem hazy due to audio problems, However try as much as you can by combining all segments and figuring out. Another thing to note , being an ISP company make note of some words despite wrong spelling may be related to routers, devices, WIFI,portal and so on")
+                      question="This is a transcription made from a customer care call at Konnect Wifi ISP , please try to summarize what is going on in English. Please note, the transcription was made using Whisper and some parts may seem hazy due to audio problems, However try as much as you can by combining all segments and figuring out. Another thing to note , being an ISP company make note of some words despite wrong spelling may be related to routers (whisper keeps pronouncing router as 'ruta' so if you see ruta know its router), devices, WIFI,portal and so on")
     print(summary)
     return summary
 
