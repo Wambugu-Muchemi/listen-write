@@ -5,6 +5,7 @@ from cleanaudio import *
 from storage import *
 from summarizeAI import *
 from datetime import date, datetime
+from natsort import natsorted
 
 def transcribe_and_append(model, audio_path, output_file):
     with open(output_file, 'a') as f:
@@ -42,7 +43,12 @@ def main():
     # Loop through audio files in the folder and transcribe each segment
     # Get a list of all WAV files in the folder and sort them
     audio_files = [file_name for file_name in os.listdir(audio_folder) if file_name.endswith(".wav")]
-    audio_files.sort()
+    
+    #audio_files.sort()
+
+    # Natural sort the list
+    audio_files = natsorted(audio_files)
+
     #for file_name in os.listdir(audio_folder):
     for file_name in audio_files:
         print("workin on",file_name)

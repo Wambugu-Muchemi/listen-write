@@ -1,9 +1,3 @@
 File: segment_1.wav (Language: sw):
-Hello? Yes. Kwani sumekua muki ya kuangayka? Juuzi kumuto nilipuhia timu hapa kachukua simu. Nikamuambia kute kwa kuwa nyumba yikoshida. Can you imagine? Jana nilipa na number 20, 20, 20, haikufanya kazi. Juuzi nilipa pesa, nikufanya kazi. Kato nasindua ni mni na pesa na mzibayi. Hello, nitajibu kusaidia sa hizi. Nomba? Nini mnataka pesa zangu yuo mnini mnini mnini. Kwani zidaka hapo? Kipanya nina nilipa. Hello, nasema hizi?
-
-File: segment_2.wav (Language: sw):
-Kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, kwa mbili, k
-
-File: segment_3.wav (Language: en):
-Okay.
+Inakwane shajes badu Inasema you have reached the maximum of 2 devices for your monthly connect Kama uleenda kwa add device na kwa ambia hivo Unafaili unakupi maka address na fune na unachange kwa change device Ivi? Nauliza device geni na kuelezea hivo Inyelikwa mpetelegi sa kipyo na inyelikwa added Inyelikwa added Unafanya hivi Pale kunya mandika add device Pachi mandika add this device
 
