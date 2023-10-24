@@ -66,10 +66,10 @@ def main():
     # Read the contents of the TXT file
     with open(txt_file_path, "r") as file:
         transcription = file.read()
-    summary = escribirAI(transcription)
+    summary, issue_category = escribirAI(transcription)
     print(summary)
     #store on db
-    store_transcription_in_sqlite(source_url, transcription, date, summary)
+    store_transcription_in_sqlite(source_url, transcription, date, summary, issue_category)
 
 if __name__ == "__main__":
     main()

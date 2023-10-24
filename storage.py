@@ -8,12 +8,13 @@ def create_transcriptions_table(conn):
             date TEXT,
             source_url TEXT,
             transcription TEXT,
-            summary TEXT
+            summary TEXT,
+            issue_category TEXT,
         )
     ''')
     conn.commit()
 
-def store_transcription_in_sqlite(source_url, transcription, date, summary, db_path='transcriptions.db'):
+def store_transcription_in_sqlite(source_url, transcription, date, summary, issue_category, db_path='transcriptions.db'):
     # Connect to SQLite database
     conn = sqlite3.connect(db_path)
 
@@ -22,9 +23,9 @@ def store_transcription_in_sqlite(source_url, transcription, date, summary, db_p
 
     # Insert data into the transcriptions table
     conn.execute('''
-        INSERT INTO transcriptions (source_url, transcription, date, summary)
-        VALUES (?, ?, ?, ?)
-    ''', (source_url, transcription, date, summary))
+        INSERT INTO transcriptions (source_url, transcription, date, summary, issue_category)
+        VALUES (?, ?, ?, ?, ?)
+    ''', (source_url, transcription, date, summary, issue_category))
 
     # Commit changes and close the connection
     conn.commit()
