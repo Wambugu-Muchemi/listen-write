@@ -9,7 +9,7 @@ def create_transcriptions_table(conn):
             source_url TEXT,
             transcription TEXT,
             summary TEXT,
-            issue_category TEXT,
+            issue_category TEXT
         )
     ''')
     conn.commit()
