@@ -16,6 +16,14 @@ def cleansimple(daudio):
     # Export the processed audio to a new file
     clean_audio.export(daudio, format="wav")
     print("audiowash complete")
+def cleansimplewithspectralgating(daudio):
+    print("Running with spectral gating")
+    audio_signal, sample_rate = nr.read_audio_file(daudio)
+    noise_profile = nr.estimate_noise_profile(audio_signal, sample_rate)
+    denoised_audio = nr.spectral_gate(audio_signal, noise_profile, threshold=10)
+    nr.write_audio_file(daudio, denoised_audio, sample_rate)
+
+
 
 def clean_audio_advanced(audio_path, output_path):
     # Load audio
