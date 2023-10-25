@@ -33,7 +33,7 @@ def main():
     source_url = input("Enter your transcription url: ")
     silerovadit(source_url)
     segmentorun()
-    model = whisper.load_model("large")
+    model = whisper.load_model("large-v2")
     audio_folder = "/home/wambugumuchemi/Projects/listen-write/audiobank"
     output_file = "/home/wambugumuchemi/Projects/listen-write/audiokon.txt"
 

@@ -6,14 +6,16 @@ from pydub import AudioSegment
 from IPython.display import Audio
 
 #import librosa
-def cleansimple():
-    audio = AudioSegment.from_file("/home/wambugumuchemi/Projects/listen-write/audiobank/segment_1.mp3", format="mp3")
+def cleansimple(daudio):
+    print("Passing sileroed audio through audiowash")
+    audio = AudioSegment.from_file(daudio, format="wav")
     clean_audio = audio.low_pass_filter(1200).high_pass_filter(200)
     #equalized_audio = clean_audio.equalize(band_range=(200, 4000))
     #preemphasized_audio = librosa.effects.preemphasis(clean_audio)
 
     # Export the processed audio to a new file
-    clean_audio.export("cleansegment1.mp3", format="mp3")
+    clean_audio.export(daudio, format="wav")
+    print("audiowash complete")
 
 def clean_audio_advanced(audio_path, output_path):
     # Load audio
@@ -94,6 +96,7 @@ def silerovadit(audiopath):
     #torch.hub.download_url_to_file('https://www.voiptroubleshooter.com/open_speech/american/OSR_us_000_0010_8k.wav', 'en_example.wav')
 
     audio = "en_example.mp3"
+    
     mp3converter(audio)
 
     #Audio('en_example.wav')
@@ -123,4 +126,6 @@ def silerovadit(audiopath):
     save_audio('only_speech.wav',
             collect_chunks(speech_timestamps, wav), sampling_rate=SAMPLING_RATE) 
     #Audio('only_speech.wav')
+    audio = 'only_speech.wav'
+    audio = cleansimple(audio)
 

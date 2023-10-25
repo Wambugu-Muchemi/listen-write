@@ -1,6 +1,9 @@
 File: segment_1.wav (Language: sw):
-Hello? Hello? Hapa ni connect? Yes, ni connect internet. Nimelekia connect na inasema bali jakonectia. Inakwanesha utipe mara ingine. Inakwanesha option na kulipa wifi itena. Hapa ni nasema not secured. Kwa device nyo inakwalesa hivo? Hello? Inasema connected but not secured. Ni device nyo inakwame hivo? Simu, laptop, TV? Simu. Simu. Na uki access network uli.
+Hello? Hello? Hello? Yes, yes. Hello? Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.
 
 File: segment_2.wav (Language: sw):
-Kuna pocket network vizuri ama? Sili miako ni Samsung, sinde? Ata yangu ni Samsung na ue na fuma the same ivu Ni amna tatizo ya yote, ni ventu Yani Samsung hizo, kwenye zina tenginezo zina kwa Zikiangale ya network inaina password zita kwa ambio tivu Buti, ina tatizo ya yote Aya fiti
+alaphu mutapanga nafu installation ok alaphu nilize nikuataka kujua tanamabeyi kwanza ok kuna kwagana pakeji ya yio daily yina kwagani 8 above 8 above kwa gadget moja ya 14mm gadget moja kama ni simu ni simu na ama laptop uivo alaphu kuna ya weekly ya device mbili alaphu kuna kwagana ya monthly monthly tumegu wanyika kuna from 1k to 2k
+
+File: segment_3.wav (Language: sw):
+1303, 16, 18, 5, 2K, 6 na kwa hivyo device dawo ni mbili 16, 18, 5, alafu 6 ni 2K 6 ni maximum lakini pia saka kwa hivyo gadget kwa kama hivyo gadget kila sita kila gadget kwa kama hivyo gadget kila sita kila gadget na jitakimia na speedyake ya 8 to 10 Mbps na zeme kama umilipa
 
