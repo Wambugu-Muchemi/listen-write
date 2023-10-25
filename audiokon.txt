@@ -1,6 +1,6 @@
 File: segment_1.wav (Language: sw):
-Hello, ume, wana shiga ni mni? Hello, debu ni kumineleze, ni tabni, uliko naangaliwa ni nitafadali Hello? Umambe internet inakuje kipote inakuje kipotea Naruto ni hi, naimi ni ya Ibugungu, kutu on 4, lakin internet ya kuna Sema kwenye huko? Hapa mbela Plat 44 Nao, iliko wame tumatimi kujo iangale tatizea keni gani Kwazunikia angala saidi yangu, ino nashana ni kuyo building do kuna tatizea, wana kuja kuitengene
+Hello? Hello? Hapa ni connect? Yes, ni connect internet. Nimelekia connect na inasema bali jakonectia. Inakwanesha utipe mara ingine. Inakwanesha option na kulipa wifi itena. Hapa ni nasema not secured. Kwa device nyo inakwalesa hivo? Hello? Inasema connected but not secured. Ni device nyo inakwame hivo? Simu, laptop, TV? Simu. Simu. Na uki access network uli.
 
-File: segment_2.wav (Language: en):
-you
+File: segment_2.wav (Language: sw):
+Kuna pocket network vizuri ama? Sili miako ni Samsung, sinde? Ata yangu ni Samsung na ue na fuma the same ivu Ni amna tatizo ya yote, ni ventu Yani Samsung hizo, kwenye zina tenginezo zina kwa Zikiangale ya network inaina password zita kwa ambio tivu Buti, ina tatizo ya yote Aya fiti
 
