@@ -103,8 +103,10 @@ def silerovadit(audiopath):
     #audio_file = "/home/wambugumuchemi/Projects/listen-write/audio.wav"
     #torch.hub.download_url_to_file('https://www.voiptroubleshooter.com/open_speech/american/OSR_us_000_0010_8k.wav', 'en_example.wav')
 
+    #apply spectralgating
     audio = "en_example.mp3"
-    
+    audio = cleansimplewithspectralgating(audio)
+
     mp3converter(audio)
 
     #Audio('en_example.wav')
