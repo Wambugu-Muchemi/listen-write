@@ -105,7 +105,7 @@ def silerovadit(audiopath):
 
     #apply spectralgating
     audio = "en_example.mp3"
-    audio = cleansimplewithspectralgating(audio)
+    #audio = cleansimplewithspectralgating(audio)
 
     mp3converter(audio)
 
