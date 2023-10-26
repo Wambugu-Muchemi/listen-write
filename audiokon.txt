@@ -1,9 +1,0 @@
-File: segment_1.wav (Language: sw):
-Hello. Hello. Hello. Hello. Hello. Hello. 91. 91. 91. 91. 91. 83. 83. 83. 83. 83. 83. 88.
-
-File: segment_2.wav (Language: sw):
-73, 77, 62, 62, 20 Mbesema 88, 00, 33, 77, 62, 20 Alapu naona mbuhamu kwa mnea device, that's why hiku inafanya So kwa TV, nataka... Tumesema kwa na chrome?
-
-File: segment_3.wav (Language: sw):
-Nipona browser poteke O hotspot, sabili ume hotspot TV ndo udownload yo chrome Uki hotspot na simu, uteanda kwa app store, si play store app store Usatijina chrome, ikulete wii store
-
