@@ -137,8 +137,13 @@ def silerovadit(audiopath):
     pprint(speech_timestamps)
 
     # merge all speech chunks to one audio
-    save_audio('only_speech.wav',
-            collect_chunks(speech_timestamps, wav), sampling_rate=SAMPLING_RATE) 
+    try:
+        save_audio('only_speech.wav',
+                collect_chunks(speech_timestamps, wav), sampling_rate=SAMPLING_RATE) 
+    except:
+        print("Couldn't pass via SileroVAD, audio probably too short or no speech was detected.")
+        import os
+        os.rename('en_example.wav', 'only_speech.wav')
     #Audio('only_speech.wav')
     # audio = 'only_speech.wav'
     # audio = cleansimplewithspectralgating(audio)
