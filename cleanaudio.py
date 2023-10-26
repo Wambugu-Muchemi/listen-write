@@ -4,24 +4,27 @@ import numpy as np
 import silero
 from pydub import AudioSegment
 from IPython.display import Audio
+import librosa
+import librosa.display
+import soundfile as sf
 
 #import librosa
 def cleansimple(daudio):
-    print("Passing sileroed audio through audiowash")
-    audio = AudioSegment.from_file(daudio, format="wav")
+    print("Passing pre-sileroed audio through audiowash")
+    audio = AudioSegment.from_file(daudio, format="mp3")
     clean_audio = audio.low_pass_filter(1200).high_pass_filter(200)
     #equalized_audio = clean_audio.equalize(band_range=(200, 4000))
     #preemphasized_audio = librosa.effects.preemphasis(clean_audio)
 
     # Export the processed audio to a new file
-    clean_audio.export(daudio, format="wav")
+    clean_audio.export(daudio, format="mp3")
     print("audiowash complete")
 def cleansimplewithspectralgating(daudio):
     print("Running with spectral gating")
-    audio_signal, sample_rate = nr.read_audio_file(daudio)
-    noise_profile = nr.estimate_noise_profile(audio_signal, sample_rate)
-    denoised_audio = nr.spectral_gate(audio_signal, noise_profile, threshold=10)
-    nr.write_audio_file(daudio, denoised_audio, sample_rate)
+    audio_signal, sample_rate = librosa.load(daudio, sr=None, mono=True)
+    # Apply spectral gating using librosa.effects.trim
+    trimmed_audio, index = librosa.effects.trim(audio_signal, top_db=20, frame_length=512, hop_length=64)
+    sf.write(daudio, trimmed_audio, sample_rate)
 
 
 
@@ -84,6 +87,7 @@ def apply_silero_vad(input_path, output_path):
 #Lets first convert mp3 to wav
 
 def mp3converter(audiopath):
+    print(audiopath)
     sound = AudioSegment.from_mp3(audiopath)
     sound.export( "en_example.wav", format="wav")
     return "en_example.wav"
@@ -105,7 +109,7 @@ def silerovadit(audiopath):
 
     #apply spectralgating
     audio = "en_example.mp3"
-    #audio = cleansimplewithspectralgating(audio)
+    #audio = cleansimple(audio)
 
     mp3converter(audio)
 
@@ -136,6 +140,6 @@ def silerovadit(audiopath):
     save_audio('only_speech.wav',
             collect_chunks(speech_timestamps, wav), sampling_rate=SAMPLING_RATE) 
     #Audio('only_speech.wav')
-    audio = 'only_speech.wav'
-    audio = cleansimple(audio)
+    # audio = 'only_speech.wav'
+    # audio = cleansimplewithspectralgating(audio)
 
