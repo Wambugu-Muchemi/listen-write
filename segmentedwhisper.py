@@ -6,6 +6,8 @@ from storage import *
 from summarizeAI import *
 from datetime import date, datetime
 from natsort import natsorted
+import pickle
+from picklethemodel import picklenow
 
 def transcribe_and_append(model, audio_path, output_file):
     with open(output_file, 'a') as f:
@@ -34,7 +36,19 @@ def main():
     checkspeech = silerovadit(source_url)
     if checkspeech == 'only_speech.wav':
         segmentorun()
-        model = whisper.load_model("large-v2")
+        #model = whisper.load_model("large-v2")
+        # Load the model from the pickle file
+        try:
+            print("Loading model from Pickle")
+            with open("whisper_model.pkl", "rb") as file:
+                model = pickle.load(file)
+            print("Model loaded")
+        except:
+            print("Model couldnt be processed from Pickle, loading from site.")
+            model = whisper.load_model("large-v2")
+            print("Model loaded but we shall pickle it for future use. Be patient.")
+            model = whisper.load_model("large-v2")
+            print("done pickling")
         audio_folder = "/home/wambugumuchemi/Projects/listen-write/audiobank"
         output_file = "/home/wambugumuchemi/Projects/listen-write/audiokon.txt"
 

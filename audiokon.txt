@@ -1,3 +1,3 @@
-File: segment_1.wav (Language: en):
-Thank you.
+File: segment_1.wav (Language: sw):
+Hello. Hello. Yes. This is correct. Yeah.
 
