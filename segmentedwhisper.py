@@ -77,10 +77,10 @@ def main():
         current_datetime = datetime.now()
         date = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
         # redefine TXT file
-        txt_file_path = "/home/wambugumuchemi/Projects/listen-write/audiokon.txt"
+        txt_file_path = "./audiokon.txt"
 
         readtxtfile()
-
+        txt_file_path = "./audiokonclean.txt"
         # Read the contents of the TXT file
         with open(txt_file_path, "r") as file:
             transcription = file.read()

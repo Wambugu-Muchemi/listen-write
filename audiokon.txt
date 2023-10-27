@@ -1,6 +1,3 @@
-File: segment_1.wav (Language: sw):
-Hello? Yes? No, but you are telling me that that number is not registered and it's connected. Ukitrai kumek paymenta mokitrai kulogi. A, a, a, eangu ni sha... eangu, unajo nunuanga ata data za connect tu natumia za wangi. Kwa kwa naunga kwa WhatsApp, nambuwa that number is not registered and it connects na ndiyo nilitumia kuji pia. Oh, unohona? Hii namba inyeme katuwa pesa.
-
-File: segment_2.wav (Language: sw):
-Namba enye unatumiaka kulogi na ayo kwa account ya connect? Iye ya account ya connect inianti yangu enye nilituma na aya kwanza Iye ya pia miangu enye nipia na aya Unaiza mtumia umambia namba enye unilogi na ayo ni kani? Tumatupa kwa whatsapp ujumu niya kwa whatsapp nisofa usinamimi
+File: segment_1.wav (Language: ro):
+Nu am pus cuptor Nu am pus cuptor
 
