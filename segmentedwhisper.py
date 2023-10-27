@@ -8,6 +8,7 @@ from datetime import date, datetime
 from natsort import natsorted
 import pickle
 from picklethemodel import picklenow
+from textcleaner import *
 
 def transcribe_and_append(model, audio_path, output_file):
     with open(output_file, 'a') as f:
@@ -77,6 +78,8 @@ def main():
         date = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
         # redefine TXT file
         txt_file_path = "/home/wambugumuchemi/Projects/listen-write/audiokon.txt"
+
+        readtxtfile()
 
         # Read the contents of the TXT file
         with open(txt_file_path, "r") as file:
