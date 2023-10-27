@@ -1,13 +1,13 @@
 import os
 import whisper
-from segmenter import *
-from cleanaudio import *
+from EscucharUnSusurro.susurro.segmenter import *
+from EscucharUnSusurro.susurro.cleanaudio import *
 from storage import *
 from summarizeAI import *
 from datetime import date, datetime
 from natsort import natsorted
 import pickle
-from picklethemodel import picklenow
+from EscucharUnSusurro.susurro.picklethemodel import picklenow
 from textcleaner import *
 
 def transcribe_and_append(model, audio_path, output_file):
