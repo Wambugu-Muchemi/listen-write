@@ -1,3 +1,9 @@
-File: segment_1.wav (Language: en):
-Hello?
+File: segment_1.wav (Language: sw):
+Hello, hello, kwecha sana? Mkonet, kundiyo? Tio. Kwa tohi histonik na kuna mtu hataka mkonet kwa TV. Kwa TV? E. TV, inajita kajidi na kisangzanga. Tonar. Neto? Tonar. Tonar? Tonar. Tonar. Eto. Oke, unafanya hizi, unasele time na date, unasele time na date kwa TV, alafu unavwekwa
+
+File: segment_2.wav (Language: sw):
+Kwa hivyo kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa kwa
+
+File: segment_3.wav (Language: sw):
+Na kama uliko umeliipata hari kwa simu, so kwa TV na Add device. Menda pali jukuwa Add device, unaguza subscription na rangia green. Lafu una manza 13 mwisho kukiguza Add device na hina kwa connected. Nazena time na date yikuwa sawa, alafi yikuwa connected na wifi ya connect. Alafi pukwa apps una confirm, Chrome ama browser unandika Google.com
 
