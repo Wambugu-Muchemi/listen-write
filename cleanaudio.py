@@ -1,3 +1,4 @@
+from sys import exception
 from pydub import AudioSegment
 import noisereduce as nr
 import numpy as np
@@ -103,7 +104,11 @@ def silerovadit(audiopath):
     from pprint import pprint
     # download example
     #torch.hub.download_url_to_file('https://models.silero.ai/vad_models/en.wav', 'en_example.wav')
-    torch.hub.download_url_to_file(audiopath, 'en_example.mp3')
+    try:
+        torch.hub.download_url_to_file(audiopath, 'en_example.mp3')
+    except Exception as e:
+        print("Download url issue: ",e)
+        return 'no silero'
     #audio_file = "/home/wambugumuchemi/Projects/listen-write/audio.wav"
     #torch.hub.download_url_to_file('https://www.voiptroubleshooter.com/open_speech/american/OSR_us_000_0010_8k.wav', 'en_example.wav')
 
