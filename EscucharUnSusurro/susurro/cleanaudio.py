@@ -79,8 +79,8 @@ def apply_silero_vad(input_path, output_path):
     # Export the VAD-processed audio to a new file
     vad_audio.export(output_path, format="mp3")
 
-# audio_path = "/home/wambugumuchemi/Projects/listen-write/only_speech.wav"
-# output_path = "/home/wambugumuchemi/Projects/listen-write/cleaned_audio/clean1.mp3"
+# audio_path = "./only_speech.wav"
+# output_path = "./cleaned_audio/clean1.mp3"
 
 # clean_audio_advanced(audio_path, output_path)
 
@@ -109,7 +109,7 @@ def silerovadit(audiopath):
     except Exception as e:
         print("Download url issue: ",e)
         return 'no silero'
-    #audio_file = "/home/wambugumuchemi/Projects/listen-write/audio.wav"
+    #audio_file = "./audio.wav"
     #torch.hub.download_url_to_file('https://www.voiptroubleshooter.com/open_speech/american/OSR_us_000_0010_8k.wav', 'en_example.wav')
 
     #apply spectralgating
@@ -136,7 +136,7 @@ def silerovadit(audiopath):
     collect_chunks) = utils
 
     wav = read_audio('en_example.wav', sampling_rate=SAMPLING_RATE)
-    #wav = read_audio("/home/wambugumuchemi/Projects/listen-write/audio.wav", sampling_rate=SAMPLING_RATE)
+    #wav = read_audio("./audio.wav", sampling_rate=SAMPLING_RATE)
     # get speech timestamps from full audio file
     speech_timestamps = get_speech_timestamps(wav, model, sampling_rate=SAMPLING_RATE)
     pprint(speech_timestamps)
