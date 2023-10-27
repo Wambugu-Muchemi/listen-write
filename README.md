@@ -4,7 +4,7 @@
 
 ## Overview
 
-EscucharUnSusurro is a powerful toolkit designed for audio transcription and in-depth analysis. Leveraging cutting-edge technologies such as Whisper ASR (Automatic Speech Recognition), Silero VAD (Voice Activity Detection), and AI language models like GPT-3 and Google Palm APIs, this project transforms raw audio into valuable insights.
+EscucharUnSusurro is a powerful toolkit designed for audio transcription and in-depth analysis. Leveraging cutting-edge technologies such as Whisper ASR (Automatic Speech Recognition), Silero VAD (Voice Activity Detection), and AI language models like GPT-3 and Google Palm APIs, this project transforms raw audio into valuable insights. I coined the name EscucharUnSusurro from Spanish 'Listen to a Whisper'.
 
 ## Key Features
 
