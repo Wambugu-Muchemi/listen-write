@@ -1,6 +1,6 @@
 # EscucharUnSusurro: Audio Transcription and Analysis Toolkit
 
-![EscucharUnSusurro Logo](logo.jpg)
+![EscucharUnSusurro Logo](EscucharUnSusurro/susurro/logo.jpg)
 
 ## Overview
 
