@@ -9,6 +9,10 @@ from natsort import natsorted
 import pickle
 from picklethemodel import picklenow
 from textcleaner import *
+from celery import Celery
+
+#create a celery app instance
+app = Celery('audioTask', broker='redis://localhost:6379/5')
 
 def transcribe_and_append(model, audio_path, output_file):
     with open(output_file, 'a') as f:
@@ -31,7 +35,8 @@ def transcribe_and_append(model, audio_path, output_file):
         transcription = result.text
         f.write(f"File: {os.path.basename(audio_path)} (Language: {detected_language}):\n")
         f.write(transcription + '\n\n')
-
+        
+@app.task
 def main():  
     source_url = input("Enter your transcription url: ")
     checkspeech = silerovadit(source_url)
