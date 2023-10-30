@@ -1,7 +1,7 @@
 from pydub import AudioSegment
 import os
 
-def split_audio(input_file, output_folder, segment_duration=25):
+def split_audio(input_file, output_folder, segment_duration=15):
     print("segmenting ...")
     audio = AudioSegment.from_file(input_file)
 
@@ -37,7 +37,7 @@ def segmentorun():
     # Create the output folder if it doesn't exist
     #os.makedirs(output_folder, exist_ok=True)
 
-    split_audio(input_file, output_folder, segment_duration=25)
+    split_audio(input_file, output_folder, segment_duration=15)
 
 if __name__ == "__main__":
     # input_file = "./only_speech.wav"  # Change this to your audio file path

@@ -1,6 +1,12 @@
 File: segment_1.wav (Language: sw):
-Hello, kwa sana? Boss, najaribu kuload internet afta kulipa Yeah, what's my idea? Najaribu kuload internet afta kulipa? Yeah, I understand Ukiload ina koneisha aji? You can't connect, taza nika log out Nika log in Ina koneisha, ina kutumia kodi lafi ina koneisha Ulipe marengi na mena The webpage at hqtp Google.com to load
+Hello. Hello. Yes. Um
 
 File: segment_2.wav (Language: sw):
-Na kwa mbia time has expired? Ya, era time out. Ni kwa TV? Kwa simu. Kwa simu na kwa mbia era time out? Yes. Okay, ebu jaribu kuhistatio simu yako, uzimisho uwa shalafu, konifamwa laingine wano.
+Kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, k
+
+File: segment_3.wav (Language: sw):
+Kwa WhatsApp, nimefoda kumba, ritu la mshaka paa Umetuma namba yako, uchini ya message, miaka namba yako ya kulo, ginapo? Pana, no, I'm told Mika namba ya simu Ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni,
+
+File: segment_4.wav (Language: sw):
+E votu ala sasa ki risi wile message ya connect SMS ya connect ya sijuri you've received an extension Sasa ujaribu kustaini ya sanya Okay
 
