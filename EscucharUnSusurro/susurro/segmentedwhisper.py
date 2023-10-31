@@ -10,11 +10,19 @@ import pickle
 from picklethemodel import picklenow
 from textcleaner import *
 from celery import Celery
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+rabbit_user = os.getenv('RABBIT_USER')
+rabbit_pass = os.getenv('RABBIT_PASS')
 
 
 
 #create a celery app instance
-app = Celery('segmentedwhisper', broker='amqp://guest:guest@localhost:5672/')
+app = Celery('segmentedwhisper', broker='amqp://{}:{}@localhost:5672/'.format(rabbit_user, rabbit_pass))
 
 
 def transcribe_and_append(model, audio_path, output_file):
