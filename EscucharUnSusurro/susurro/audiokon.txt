@@ -1,0 +1,6 @@
+File: segment_1.wav (Language: sw):
+Hello? Yes, buwasana. Hello? Yes. Kweke wa ruta kwa nyumba. Hello? Nisaidi kani pini huko? 44 Hii, ninaitu waji? Nini ruti. Kuna mwi inampa namba kupigie. Nlafu wa kijie pini huko ato ugunizi jinzu na kuja kweke wa yoyo ya nyumba. Kwa building inyoko kuna iyo kwa net? Iko kwa net.
+
+File: segment_2.wav (Language: sw):
+Achani mwambia kuja kuupata kwekia nyumba andani sasuma.
+
