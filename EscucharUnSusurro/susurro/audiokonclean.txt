@@ -1,12 +1,6 @@
 File: segment_1.wav (Language: sw):
-Hello. Hello. Yes. Um
+Kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, k
 
 File: segment_2.wav (Language: sw):
 Kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, k
-
-File: segment_3.wav (Language: sw):
-Kwa WhatsApp, nimefoda kumba, ritu la mshaka paa Umetuma namba yako, uchini ya message, miaka namba yako ya kulo, ginapo? Pana, no, I'm told Mika namba ya simu Ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni,
-
-File: segment_4.wav (Language: sw):
-E votu ala sasa ki risi wile message ya connect SMS ya connect ya sijuri you've received an extension Sasa ujaribu kustaini ya sanya Okay
 
