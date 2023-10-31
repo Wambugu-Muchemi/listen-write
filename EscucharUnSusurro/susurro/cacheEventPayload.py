@@ -1,7 +1,7 @@
 import redis
 import numpy as np
-import audioTask
-
+from segmenter import *
+import segmentedwhisper
 
 
 redisClient = redis.StrictRedis(host='localhost', port=6379, db=6)
@@ -26,7 +26,7 @@ def cacheEventPayload(payload):
 
         #send task to celery que
               #enque a tasl with received audio file
-        audioTask.transcribe_audio.delay(recordUrl)
+        segmentedwhisper.maintask.delay(recordUrl)
     else:
         print(f"key '{sessionId}' already exists  not set")
 

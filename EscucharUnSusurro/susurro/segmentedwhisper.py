@@ -11,8 +11,11 @@ from picklethemodel import picklenow
 from textcleaner import *
 from celery import Celery
 
+
+
 #create a celery app instance
-app = Celery('audioTask', broker='redis://localhost:6379/5')
+app = Celery('segmentedwhisper', broker='amqp://guest:guest@localhost:5672/')
+
 
 def transcribe_and_append(model, audio_path, output_file):
     with open(output_file, 'a') as f:
@@ -35,10 +38,9 @@ def transcribe_and_append(model, audio_path, output_file):
         transcription = result.text
         f.write(f"File: {os.path.basename(audio_path)} (Language: {detected_language}):\n")
         f.write(transcription + '\n\n')
-        
 @app.task
-def main():  
-    source_url = input("Enter your transcription url: ")
+def maintask(source_url): 
+    print("initiating main task...") 
     checkspeech = silerovadit(source_url)
     if checkspeech == 'only_speech.wav':
         segmentorun()
@@ -87,15 +89,21 @@ def main():
         readtxtfile()
         txt_file_path = "./audiokonclean.txt"
         # Read the contents of the TXT file
-        with open(txt_file_path, "r") as file:
-            transcription = file.read()
-        summary, issue_category = escribirAI(transcription)
-        print(summary)
-        #store on db
-        store_transcription_in_sqlite(source_url, transcription, date, summary, issue_category)
+        try:
+            with open(txt_file_path, "r") as file:
+                transcription = file.read()
+            summary, issue_category = escribirAI(transcription)
+            
+            file.close()
+            #store on db
+            store_transcription_in_sqlite(source_url, transcription, date, summary, issue_category)
+            return summary
+        except Exception as e:
+            return e
+
     else:
         print('No speech detected!')
-        pass
+        return 'No speech detected'
+        
 
-if __name__ == "__main__":
-    main()
+

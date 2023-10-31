@@ -6,7 +6,23 @@ from cacheEventPayload import cacheEventPayload
 
 
 running = True
-def consumeCompletedCalls(consumer, topics):
+def consumeCompletedCalls():
+
+    #define configuration
+    conf = {
+        'bootstrap.servers': '105.29.165.253:29092', 
+        'group.id': 'Ahadi-Transcriber-ML',
+        'auto.offset.reset': 'smallest',
+        'broker.address.family': 'v4',
+    
+    }
+
+    #instantiate a consumer
+    consumer = Consumer(conf)
+    print(consumer)
+
+    topics = ["completedTpc"]
+
 
     try:
         consumer.subscribe(topics)
@@ -39,18 +55,6 @@ def consumeCompletedCalls(consumer, topics):
 
 
 
-#define configuration
-conf = {
-    'bootstrap.servers': 'localhost:9092', 
-    'group.id': 'Muchmi-ML',
-    'auto.offset.reset': 'smallest',
-}
-
-#instantiate a consumer
-consumer = Consumer(conf)
-
-topics = ["completedTpc"]
-
 
 if __name__ == "__main__":
-    consumeCompletedCalls(consumer=consumer, topics=topics)
+    consumeCompletedCalls()
