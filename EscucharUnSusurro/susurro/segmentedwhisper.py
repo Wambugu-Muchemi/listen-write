@@ -34,6 +34,7 @@ def transcribe_and_append(model, audio_path, output_file):
 
 def main():  
     source_url = input("Enter your transcription url: ")
+    contact = input("Enter customer contact: ")
     checkspeech = silerovadit(source_url)
     if checkspeech == 'only_speech.wav':
         segmentorun()
@@ -87,7 +88,7 @@ def main():
         summary, issue_category = escribirAI(transcription)
         print(summary)
         #store on db
-        store_transcription_in_sqlite(source_url, transcription, date, summary, issue_category)
+        store_transcription_in_sqlite(source_url, transcription, date, summary, issue_category,contact)
     else:
         print('No speech detected!')
         pass
