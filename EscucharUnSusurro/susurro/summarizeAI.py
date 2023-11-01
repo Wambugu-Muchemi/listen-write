@@ -5,9 +5,10 @@ from langchain.chains.question_answering import load_qa_chain
 import json
 import requests
 from dotenv import load_dotenv
-load_dotenv() 
 import os
 from pprint import pprint
+from loguru import logger
+load_dotenv()
 
 openai_api_key = os.getenv("OPENAI_API_KEY")
 PALM = os.getenv("PALM")
@@ -19,8 +20,8 @@ def escribirAI(transcription):
     summary = qa_chain.run(input_documents=[doc],  
                       question="This is a transcription made from a customer care call at Konnect Wifi which is an ISP company, please try to summarize what is going on in English. Please note, the transcription was made using Whisper and some parts may seem hazy due to audio problems, However try as much as you can by combining all segments and figuring out. Another thing to note , being an ISP company make note of some words despite wrong spelling may be related to routers (whisper keeps pronouncing router as 'ruta' so if you see ruta know its router), devices, WIFI,portal and so on")
     issue_category = askpalm(f"{summary} Categorize this summary as any of the following: Router Installation , Change / Add Device ,Product Enquiry ,TV Connection ,SMS Code Issue ,Payment Issue, Router Technical Problem, Obtaining IP Issue or Other")
-    print(issue_category)
-    print(summary)
+    logger.info(issue_category)
+    logger.info(summary)
     return summary, issue_category
 
 def askpalm(prompt):
@@ -32,7 +33,7 @@ def askpalm(prompt):
     Returns:
         A string containing the generated text.
     """
-    print("Calling Palmer for help!")
+    logger.info("Calling Palmer for help!")
     headers = {'Content-Type': 'application/json'}
     data = {'prompt': {'text': prompt}}
     response = requests.post(

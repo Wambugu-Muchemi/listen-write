@@ -84,7 +84,8 @@ def maintask(source_url):
 
         #for file_name in os.listdir(audio_folder):
         for file_name in audio_files:
-            logger.info("workin on",file_name)
+            logger.info(file_name)
+            logger.info(f"workin on {file_name}")
             if file_name.endswith(".wav"):
                 audio_path = os.path.join(audio_folder, file_name)
                 transcribe_and_append(model, audio_path, output_file)
