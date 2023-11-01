@@ -11,7 +11,7 @@ from picklethemodel import picklenow
 from textcleaner import *
 from celery import Celery
 import os
-
+from loguru import logger
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -22,7 +22,7 @@ rabbit_pass = os.getenv('RABBIT_PASS')
 
 
 #create a celery app instance
-app = Celery('segmentedwhisper', broker='amqp://{}:{}@localhost:5672/'.format(rabbit_user, rabbit_pass))
+app = Celery('segmentedwhisper', broker='amqp://{}:{}@localhost:5672/atkCalls'.format(rabbit_user, rabbit_pass), broker_connection_retry=True)
 
 
 def transcribe_and_append(model, audio_path, output_file):
@@ -48,23 +48,25 @@ def transcribe_and_append(model, audio_path, output_file):
         f.write(transcription + '\n\n')
 @app.task
 def maintask(source_url): 
-    print("initiating main task...") 
+    logger.info("initiating main task...")
+     
     checkspeech = silerovadit(source_url)
+    
     if checkspeech == 'only_speech.wav':
         segmentorun()
         #model = whisper.load_model("large-v2")
         # Load the model from the pickle file
         try:
-            print("Loading model from Pickle")
+            logger.info("Loading model from Pickle")
             with open("whisper_model.pkl", "rb") as file:
                 model = pickle.load(file)
-            print("Model loaded")
+            logger.info("Model loaded")
         except:
-            print("Model couldnt be processed from Pickle, loading from site.")
+            logger.debug("Model couldnt be processed from Pickle, loading from site.")
             model = whisper.load_model("large-v2")
-            print("Model loaded but we shall pickle it for future use. Be patient.")
+            logger.info("Model loaded but we shall pickle it for future use. Be patient.")
             model = whisper.load_model("large-v2")
-            print("done pickling")
+            logger.info("done pickling")
         audio_folder = "./audiobank"
         output_file = "./audiokon.txt"
 
@@ -82,7 +84,7 @@ def maintask(source_url):
 
         #for file_name in os.listdir(audio_folder):
         for file_name in audio_files:
-            print("workin on",file_name)
+            logger.info("workin on",file_name)
             if file_name.endswith(".wav"):
                 audio_path = os.path.join(audio_folder, file_name)
                 transcribe_and_append(model, audio_path, output_file)
@@ -110,7 +112,7 @@ def maintask(source_url):
             return e
 
     else:
-        print('No speech detected!')
+        logger.info('No speech detected!')
         return 'No speech detected'
         
 

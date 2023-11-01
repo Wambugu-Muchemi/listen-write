@@ -2,7 +2,7 @@ import redis
 import numpy as np
 from segmenter import *
 import segmentedwhisper
-
+from loguru import logger
 
 redisClient = redis.StrictRedis(host='localhost', port=6379, db=6)
 
@@ -18,7 +18,7 @@ def cacheEventPayload(payload):
     key_set = redisClient.setnx(sessionId, recordUrl)
 
     if key_set:
-        print(f"'{sessionId}' set value '{recordUrl}'")
+        logger.info(f"'{sessionId}' set value '{recordUrl}'")
 
         #define expiry duration to clean redis(one day)
 
@@ -28,6 +28,6 @@ def cacheEventPayload(payload):
               #enque a tasl with received audio file
         segmentedwhisper.maintask.delay(recordUrl)
     else:
-        print(f"key '{sessionId}' already exists  not set")
+        logger.info(f"key '{sessionId}' already exists  not set")
 
 

@@ -3,6 +3,7 @@ import sys
 import json
 
 from cacheEventPayload import cacheEventPayload
+from loguru import logger
 
 
 running = True
@@ -19,13 +20,15 @@ def consumeCompletedCalls():
 
     #instantiate a consumer
     consumer = Consumer(conf)
-    print(consumer)
+    
 
     topics = ["completedTpc"]
 
 
     try:
+        logger.info("Subscribing to {} ".format(topics))
         consumer.subscribe(topics)
+        logger.info("Subscribed to {} ".format(topics))
         while running:
             msg = consumer.poll(timeout=1.0)
             if msg is None: continue
@@ -40,7 +43,7 @@ def consumeCompletedCalls():
                 valueString = str(msg.value(), encoding='utf-8')
                 jsonString = json.loads(valueString)
                 recordingUrl = jsonString["recordingUrl"]
-                print("Found url {}".format(recordingUrl))
+                logger.info("Found url {}".format(recordingUrl))
                 
                 if len(recordingUrl) >=10:
                     #write to temp cache to enforce uniqueness
@@ -48,7 +51,7 @@ def consumeCompletedCalls():
 
                
                 else:
-                    print("Error with audio url {}".format(recordingUrl))
+                    logger.debug("Error with audio url {}".format(recordingUrl))
     finally:
         #close down consumer
         consumer.close()

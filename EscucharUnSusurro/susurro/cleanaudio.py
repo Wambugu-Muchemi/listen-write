@@ -1,4 +1,5 @@
 from sys import *
+from loguru import logger
 from pydub import AudioSegment
 import noisereduce as nr
 import numpy as np
@@ -96,6 +97,7 @@ def mp3converter(audiopath):
     
 #Audio("en_example.wav")
 def silerovadit(audiopath):
+    
     SAMPLING_RATE = 16000
     import torch
     torch.set_num_threads(1)
