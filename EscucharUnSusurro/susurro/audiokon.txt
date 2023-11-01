@@ -1,6 +1,3 @@
-File: segment_1.wav (Language: sw):
-Hello, kwa sana? Boss, najaribu kuload internet afta kulipa Yeah, what's my idea? Najaribu kuload internet afta kulipa? Yeah, I understand Ukiload ina koneisha aji? You can't connect, taza nika log out Nika log in Ina koneisha, ina kutumia kodi lafi ina koneisha Ulipe marengi na mena The webpage at hqtp Google.com to load
-
-File: segment_2.wav (Language: sw):
-Na kwa mbia time has expired? Ya, era time out. Ni kwa TV? Kwa simu. Kwa simu na kwa mbia era time out? Yes. Okay, ebu jaribu kuhistatio simu yako, uzimisho uwa shalafu, konifamwa laingine wano.
+File: segment_1.wav (Language: en):
+We connect customer care, how can I help you? If you want to contact us, you want to come and spend here?
 

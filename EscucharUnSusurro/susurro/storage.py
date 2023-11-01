@@ -1,4 +1,5 @@
 import sqlite3
+from venv import logger
 
 def create_transcriptions_table(conn):
     cursor = conn.cursor()
@@ -22,10 +23,14 @@ def store_transcription_in_sqlite(source_url, transcription, date, summary, issu
     create_transcriptions_table(conn)
 
     # Insert data into the transcriptions table
-    conn.execute('''
-        INSERT INTO transcriptions (source_url, transcription, date, summary, issue_category)
-        VALUES (?, ?, ?, ?, ?)
-    ''', (source_url, transcription, date, summary, issue_category))
+    try:
+        logger.info('Trying to inserting data to db')
+        conn.execute('''
+            INSERT INTO transcriptions (source_url, transcription, date, summary, issue_category)
+            VALUES (?, ?, ?, ?, ?)
+        ''', (source_url, transcription, date, summary, issue_category))
+    except Exception as e:
+        logger.debug('Insertion failed due to: ',e)
 
     # Commit changes and close the connection
     conn.commit()

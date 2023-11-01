@@ -22,7 +22,7 @@ rabbit_pass = os.getenv('RABBIT_PASS')
 
 
 #create a celery app instance
-app = Celery('segmentedwhisper', broker='amqp://{}:{}@localhost:5672/atkCalls'.format(rabbit_user, rabbit_pass), broker_connection_retry=True)
+app = Celery('segmentedwhisper', broker='amqp://{}:{}@localhost:5672/'.format(rabbit_user, rabbit_pass), broker_connection_retry=True)
 
 
 def transcribe_and_append(model, audio_path, output_file):
@@ -106,6 +106,7 @@ def maintask(source_url):
             
             file.close()
             #store on db
+            logger.info('Trying to write to sqlite')
             store_transcription_in_sqlite(source_url, transcription, date, summary, issue_category)
             return summary
         except Exception as e:
