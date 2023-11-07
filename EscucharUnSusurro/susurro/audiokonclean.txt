@@ -1,6 +1,9 @@
 File: segment_1.wav (Language: sw):
-Halo, mwanya. Mwanya. Mwanya. Mwanya. Mwanya. Mwanya.
+Hello, sasa, kwa sana, ha, ni kwa nakonect, ni likwa nataka kuhadu kwa device na inakataa Ok, unataka kuhadu kwa device gani? Nataka kuhadu mtui, juu, ni mimini melipa soo, nataka kuhadu bishkiyangu Ok, utalogina namba yako kwa simi yake, alafu finiyopisha ni mandi kuhadu device, utuona green code ni mandi kwa hapu, tutoiselect, alafu scroll down
 
 File: segment_2.wav (Language: sw):
-Kama yu ni kama area yote kwa efektu na yetu Na saa mbingi tukona efektu na yetu in that area Tuzimu manja minga Ketani confirm what is the issue? Hmm Mayona Mayona, sida ni nini? Na nasama tata ni confirm for my end what is the issue? Hmm Tawa
+Kwa hivyo kwa hivyo, kwa hivyo kwa hivyo, kwa hivyo kwa hivyo, kwa hivyo kwa hivyo, kwa hivyo kwa hivyo, kwa hivyo kwa hivyo, kwa hivyo kwa hivyo, kwa hivyo kwa hivyo, kwa h
+
+File: segment_3.wav (Language: sw):
+Nini yangu.
 
