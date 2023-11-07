@@ -11,6 +11,15 @@ from picklethemodel import picklenow
 from textcleaner import *
 
 def transcribe_and_append(model, audio_path, output_file):
+    """
+    Transcribe the audio at the given path using the provided model
+    and append the result to the specified output file.
+
+    Args:
+    - model: The whisper ASR model.
+    - audio_path: The path to the audio file.
+    - output_file: The file to append the transcription result to.
+    """
     with open(output_file, 'a') as f:
         # load audio and pad/trim it to fit 30 seconds
         audio = whisper.load_audio(audio_path)
@@ -33,62 +42,65 @@ def transcribe_and_append(model, audio_path, output_file):
         f.write(transcription + '\n\n')
 
 def main():  
-    source_url = input("Enter your transcription url: ")
+    # Get user input for transcription URL and customer contact
+    source_url = input("Enter your transcription URL: ")
     contact = input("Enter customer contact: ")
+
+    # Check if speech is present in the provided URL
     checkspeech = silerovadit(source_url)
     if checkspeech == 'only_speech.wav':
+        # Segment the audio
         segmentorun()
-        #model = whisper.load_model("large-v2")
-        # Load the model from the pickle file
+
+        # Load the model from the pickle file, or from the site if pickle fails
         try:
             print("Loading model from Pickle")
             with open("whisper_model.pkl", "rb") as file:
                 model = pickle.load(file)
             print("Model loaded")
         except:
-            print("Model couldnt be processed from Pickle, loading from site.")
+            print("Model couldn't be processed from Pickle, loading from site.")
             model = whisper.load_model("large-v2")
             print("Model loaded but we shall pickle it for future use. Be patient.")
-            model = whisper.load_model("large-v2")
-            print("done pickling")
+            picklenow(model, "whisper_model.pkl")
+            print("Done pickling")
+
+        # Set the audio folder and output file paths
         audio_folder = "./audiobank"
         output_file = "./audiokon.txt"
 
         # Ensure the output file is empty
         open(output_file, 'w').close()
 
-        # Loop through audio files in the folder and transcribe each segment
         # Get a list of all WAV files in the folder and sort them
         audio_files = [file_name for file_name in os.listdir(audio_folder) if file_name.endswith(".wav")]
-        
-        #audio_files.sort()
 
         # Natural sort the list
         audio_files = natsorted(audio_files)
 
-        #for file_name in os.listdir(audio_folder):
+        # Process each audio file, transcribe, and remove the original file
         for file_name in audio_files:
-            print("workin on",file_name)
+            print("Working on", file_name)
             if file_name.endswith(".wav"):
                 audio_path = os.path.join(audio_folder, file_name)
                 transcribe_and_append(model, audio_path, output_file)
                 os.remove(f"./audiobank/{file_name}")
-        
+
+        # Process the transcriptions and store them in the database
         transcription = ""
         current_datetime = datetime.now()
-        date = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-        # redefine TXT file
-        txt_file_path = "./audiokon.txt"
-
+        date_str = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+        
+        # Read the contents of the cleaned TXT file
         readtxtfile()
         txt_file_path = "./audiokonclean.txt"
-        # Read the contents of the TXT file
         with open(txt_file_path, "r") as file:
             transcription = file.read()
         summary, issue_category = escribirAI(transcription)
         print(summary)
-        #store on db
-        store_transcription_in_sqlite(source_url, transcription, date, summary, issue_category,contact)
+        
+        # Store the transcription in the SQLite database
+        store_transcription_in_sqlite(source_url, transcription, date_str, summary, issue_category, contact)
     else:
         print('No speech detected!')
         pass
