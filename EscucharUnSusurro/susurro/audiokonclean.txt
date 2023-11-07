@@ -1,9 +1,3 @@
 File: segment_1.wav (Language: sw):
-Hello, sasa, kwa sana, ha, ni kwa nakonect, ni likwa nataka kuhadu kwa device na inakataa Ok, unataka kuhadu kwa device gani? Nataka kuhadu mtui, juu, ni mimini melipa soo, nataka kuhadu bishkiyangu Ok, utalogina namba yako kwa simi yake, alafu finiyopisha ni mandi kuhadu device, utuona green code ni mandi kwa hapu, tutoiselect, alafu scroll down
-
-File: segment_2.wav (Language: sw):
-Kwa hivyo kwa hivyo, kwa hivyo kwa hivyo, kwa hivyo kwa hivyo, kwa hivyo kwa hivyo, kwa hivyo kwa hivyo, kwa hivyo kwa hivyo, kwa hivyo kwa hivyo, kwa hivyo kwa hivyo, kwa h
-
-File: segment_3.wav (Language: sw):
-Nini yangu.
+Hello. Hello. Hello. Hello. Hello. Hello.
 
