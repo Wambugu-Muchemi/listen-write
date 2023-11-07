@@ -282,6 +282,14 @@ EscucharUnSusurro is a powerful toolkit designed for audio transcription and in-
 
    Congratulations! You have successfully run the EscucharUnSusurro workflow. Adjustments to the workflow or additional configurations can be made based on specific use cases or requirements.
 
+## `Acknowledgements`
+
+This project is built upon the remarkable work of the [OpenAI Whisper](https://github.com/openai/whisper) team. Whisper is an advanced Automatic Speech Recognition (ASR) model developed by OpenAI, and its capabilities form the foundation of EscucharUnSusurro.
+
+Please check out the official [OpenAI Whisper repository](https://github.com/openai/whisper) for detailed information on the Whisper ASR model, usage guidelines, and updates from the OpenAI team.
+
+**Note:** Make sure to review and comply with the licensing and attribution requirements specified by the original project.
+
 
 
 
