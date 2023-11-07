@@ -1,6 +1,6 @@
 # EscucharUnSusurro: Advanced Audio Transcription and Inferential Analysis Toolkit
 
-![EscucharUnSusurro Logo](EscucharUnSusurro/susurro/compressedlogo2.jpg)
+![EscucharUnSusurro Logo](EscucharUnSusurro/susurro/compressedlogo2.jpeg)
 
 ## Overview
 
