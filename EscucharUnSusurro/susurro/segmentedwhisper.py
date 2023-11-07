@@ -92,11 +92,13 @@ def main():
         date_str = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
         
         # Read the contents of the cleaned TXT file
-        readtxtfile()
+        input_file_path = './audiokon.txt'
+        output_file_path = './audiokonclean.txt'
+        read_and_clean_text(input_file_path,output_file_path)
         txt_file_path = "./audiokonclean.txt"
         with open(txt_file_path, "r") as file:
             transcription = file.read()
-        summary, issue_category = escribirAI(transcription)
+        summary, issue_category = escribir_AI(transcription)
         print(summary)
         
         # Store the transcription in the SQLite database

@@ -11,7 +11,7 @@ load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 PALM = os.getenv("PALM")
 
-def escribir_ai(transcription):
+def escribir_AI(transcription):
     """
     Generate a summary and issue category from a transcription.
 

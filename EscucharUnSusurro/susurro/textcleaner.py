@@ -1,39 +1,40 @@
 import re
-from pprint import pprint
 
 def clean_repeated_text(segment_text):
-    # Define a regular expression pattern for repeated text
-    #pattern = re.compile(r'(\b\w+\b)(?:.*\b\1\b){3,}', re.IGNORECASE)
+    """
+    Remove repeated words and phrases from the input segment text.
+
+    Args:
+    - segment_text: The input text.
+
+    Returns:
+    - The cleaned text with repeated words and phrases removed.
+    """
     pattern = re.compile(r"(.+)(\1{2,})", re.IGNORECASE)
 
-    # Check if the segment text contains repetitions
     if re.search(pattern, segment_text):
-        # Find all repeated patterns in the segment text
         matches = re.findall(pattern, segment_text)
-
-        # Remove the repetitions from the segment text
         cleaned_text = re.sub(pattern, r'\1', segment_text)
-
         return cleaned_text
     else:
         return segment_text
 
-def readtxtfile():
-    file_path = './audiokon.txt'
+def read_and_clean_text(input_file_path, output_file_path):
+    """
+    Read text from an input file, clean it by removing repeated words and phrases, and write the cleaned text to an output file.
 
-    # Read the content of the file into the segment_text variable
-    with open(file_path, 'r') as file:
+    Args:
+    - input_file_path: The path to the input text file.
+    - output_file_path: The path to the output text file.
+    """
+    with open(input_file_path, 'r') as file:
         segment_text = file.read()
-        # Clean the segment text by removing repeated words and phrases
         cleaned_text = clean_repeated_text(segment_text)
-        print("Cleaned Text:\n",cleaned_text)
-        with open('./audiokonclean.txt', 'w') as file:
-            file.write(cleaned_text)
-    
+
+    with open(output_file_path, 'w') as file:
+        file.write(cleaned_text)
 
 # Example usage
-# segment_text = "Kwa hivyo, kwa hivyo, kwa hivyo, kwa hivyo, "
-# cleaned_text = clean_repeated_text(segment_text)
-# print("Original Text:", segment_text)
-# print("Cleaned Text:", cleaned_text)
-#readtxtfile()
+# input_file_path = './audiokon.txt'
+# output_file_path = './audiokonclean.txt'
+# read_and_clean_text(input_file_path, output_file_path)
