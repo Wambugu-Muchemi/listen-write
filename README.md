@@ -4,7 +4,7 @@
 
 ## Overview
 
-EscucharUnSusurro is a powerful toolkit designed for audio transcription and in-depth analysis. Leveraging cutting-edge technologies such as Whisper ASR (Automatic Speech Recognition), Silero VAD (Voice Activity Detection), and AI language models like GPT-3 and Google Palm APIs, this project transforms raw audio into valuable insights. I coined the name EscucharUnSusurro from Spanish *Escuchar un sussuro* meaning 'Listen to a Whisper'.
+EscucharUnSusurro is a powerful toolkit designed for audio transcription and in-depth inferencing analysis. Leveraging cutting-edge technologies such as Whisper ASR (Automatic Speech Recognition), Silero VAD (Voice Activity Detection), and AI language models like GPT-3 and Google Palm APIs, this project transforms raw audio into valuable insights. I coined the name EscucharUnSusurro from Spanish *Escuchar un sussuro* meaning 'Listen to a Whisper', symbolizing the nuanced inferencing capabilities embedded within each sound.
 
 ## Key Features
 
@@ -46,7 +46,7 @@ EscucharUnSusurro is a powerful toolkit designed for audio transcription and in-
     transcription = result.text
     print("Transcription:", transcription)
     ```
-  - This example demonstrates how to transcribe an audio file using the Whisper ASR model and extract the resulting transcription for further use.
+  - This example demonstrates how to transcribe an audio file using the Whisper ASR model and extract the resulting transcription for further use. Note: If your audio content is purely in English, you could change `large-v2` model to `tiny` or `base` as they are English-only models thus tend to perform better and faster.
   
 ### 2. Silero VAD Implementation
 
