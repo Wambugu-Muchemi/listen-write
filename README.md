@@ -1,4 +1,4 @@
-# EscucharUnSusurro: Audio Transcription and Analysis Toolkit
+# EscucharUnSusurro: Advanced Audio Transcription and Inferential Analysis Toolkit
 
 ![EscucharUnSusurro Logo](EscucharUnSusurro/susurro/compressedlogo.jpg)
 
