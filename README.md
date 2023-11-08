@@ -212,7 +212,10 @@ EscucharUnSusurro is a powerful toolkit designed for audio transcription and in-
     # Create a KML file for Google Earth
     create_kml_file(geographical_data)
     ```
-  - This example illustrates how to use Matplotlib, Seaborn, Plotly, Folium, and KML files to visualize different aspects of transcribed data. Modify the functions based on the specific visualizations you want to generate.
+  - This example illustrates how to use Matplotlib, Seaborn, Plotly, Folium, and KML files to visualize different aspects of transcribed data. Modify the functions based on the specific visualizations you want to generate. See these examples on google colab;
+  
+  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Wambugu-Muchemi/listen-write/blob/main/EscucharUnSusurro/susurro/colabstatusfromdb.ipynb)
+
 
 ### 7. Whisper Model Optimization
 
