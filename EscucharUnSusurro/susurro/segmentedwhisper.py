@@ -60,7 +60,7 @@ def main():
             print("Model loaded")
         except:
             print("Model couldn't be processed from Pickle, loading from site.")
-            model = whisper.load_model("large-v2")
+            model = whisper.load_model("large")
             print("Model loaded but we shall pickle it for future use. Be patient.") 
             picklenow()
             print("Done pickling")
