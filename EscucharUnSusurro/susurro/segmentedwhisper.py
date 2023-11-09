@@ -60,9 +60,9 @@ def main():
             print("Model loaded")
         except:
             print("Model couldn't be processed from Pickle, loading from site.")
-            model = whisper.load_model("large")
+            model = whisper.load_model("large-v2")
             print("Model loaded but we shall pickle it for future use. Be patient.") 
-            picklenow()
+            #picklenow()
             print("Done pickling")
 
         # Set the audio folder and output file paths
