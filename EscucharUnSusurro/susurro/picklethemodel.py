@@ -1,7 +1,7 @@
 import pickle
 import whisper
 
-def pickle_model():
+def picklenow():
     """
     Load the Whisper model and save it to a pickle file.
     """
