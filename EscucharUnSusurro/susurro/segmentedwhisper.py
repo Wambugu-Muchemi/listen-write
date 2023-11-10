@@ -26,7 +26,7 @@ def transcribe_and_append(model, audio_path, output_file):
         audio = whisper.pad_or_trim(audio)
 
         # make log-Mel spectrogram and move to the same device as the model
-        mel = whisper.log_mel_spectrogram(audio).to(model.device)
+        mel = whisper.log_mel_spectrogram(audio=audio, n_mels=128).to(model.device)
 
         # detect the spoken language
         _, probs = model.detect_language(mel)
@@ -60,7 +60,7 @@ def main():
             print("Model loaded")
         except:
             print("Model couldn't be processed from Pickle, loading from site.")
-            model = whisper.load_model("large-v2")
+            model = whisper.load_model("large")
             print("Model loaded but we shall pickle it for future use. Be patient.") 
             #picklenow()
             print("Done pickling")
