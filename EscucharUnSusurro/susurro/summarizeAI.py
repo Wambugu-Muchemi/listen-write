@@ -69,3 +69,5 @@ def ask_palm(prompt):
     except requests.exceptions.RequestException as e:
         print(f"Error calling Palmer API: {e}")
         return ''
+    
+#escribir_AI("nyinyi hamna internet?")
