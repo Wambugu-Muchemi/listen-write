@@ -157,3 +157,30 @@ def getmymap():
         if name != "Untitled Path":
             folium.Circle(location=[lat, lon], radius=5, color='green', fill=True, fill_color='blue', popup=name).add_to(mymap)
     return mymap
+
+def determineIconcolor(buildingcode):
+    if 'KENKH' in buildingcode:
+        iconcolor = 'blue'
+    elif 'KENKS' in buildingcode:
+        iconcolor = 'darkblue'
+    elif 'KENKM' in buildingcode:
+        iconcolor = 'purple'
+    elif 'KEKRK' in buildingcode:
+        iconcolor = 'cadetblue'
+    elif 'KENKK' in buildingcode:
+        iconcolor = 'gray'
+    elif 'KENRG' in buildingcode:
+        iconcolor = 'black'
+    elif 'KENRZ' in buildingcode:
+        iconcolor = 'beige'
+    elif 'KEKRG' in buildingcode:
+        iconcolor = 'lightblue'
+    elif 'KENRK' in buildingcode:
+        iconcolor = 'green'
+    elif 'KENRL' in buildingcode:
+        iconcolor = 'lightgray'
+    elif 'KENRR' in buildingcode:
+        iconcolor = 'darkblue'
+    else:
+        iconcolor = 'orange'
+    return iconcolor   
