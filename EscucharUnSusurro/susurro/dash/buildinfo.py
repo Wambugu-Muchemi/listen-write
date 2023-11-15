@@ -6,6 +6,8 @@ apiurl = os.getenv('apiurl')
 
 import requests
 from pprint import pprint
+from datetime import datetime, timedelta
+import sqlite3
 num = ''
 def getONU(num):
     url = f"{apiurl}/api/komp_assistant/onu/phone/{num}"
@@ -63,17 +65,20 @@ def getbcode(num):
     except Exception as e:
         #print('Error: ',e)
         pass
-# result = getbcode(num)
-# #print(result)
-# if isinstance(result, tuple):
-#     #print("Result is a tuple")
-#     router, num, buildingcode, bname = result
-# else:
-#     #print("Result is not a tuple")
-#     buildingcode = 'Not Exist'
-def getresultsdict():
-    import sqlite3
-    from pprint import pprint
+
+
+def getresultsdict(time_period='all'):
+    # Check the system date
+    system_date = datetime.now().strftime('%Y-%m-%d')
+
+    # Define the date condition based on the time period
+    if time_period == 'today':
+        date_condition = f"DATE(date) = '{system_date}'"
+    elif time_period == 'last_week':
+        last_week_start = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
+        date_condition = f"DATE(date) BETWEEN '{last_week_start}' AND '{system_date}'"
+    else:  # Default to 'all'
+        date_condition = "1=1"
 
     # Connect to the SQLite database
     conn = sqlite3.connect('../transcriptions.db')
@@ -83,11 +88,11 @@ def getresultsdict():
     results_dict = {}
 
     # Retrieve unique contact numbers from the transcriptions table
-    cursor.execute("SELECT DISTINCT contact FROM transcriptions WHERE contact IS NOT NULL;")
-    # cursor.execute("SELECT DISTINCT contact FROM transcriptions WHERE contact IS NOT NULL AND (substr(date, 1, 10) = '2023-10-28' AND issue_category = 'Router Technical Problem');")
-
+    query = f"SELECT DISTINCT contact FROM transcriptions WHERE contact IS NOT NULL AND {date_condition};"
+    cursor.execute(query)
 
     contacts = cursor.fetchall()
+    #print(contacts)
 
     # Iterate over each contact number
     for contact in contacts:
@@ -112,6 +117,7 @@ def getresultsdict():
     # Close the database connection
     conn.close()
     return results_dict
+
 
 def getmymap():
     import folium
@@ -184,3 +190,79 @@ def determineIconcolor(buildingcode):
     else:
         iconcolor = 'orange'
     return iconcolor   
+
+def generate_plots():
+    from dash import dcc, html
+    import pandas as pd
+    import plotly.express as px
+    from wordcloud import WordCloud
+    import base64
+    from io import BytesIO
+    from PIL import Image
+    import numpy as np
+
+    # Connect to the SQLite database
+    conn = sqlite3.connect('/home/wambugumuchemi/projects/listen-write/EscucharUnSusurro/susurro/transcriptions.db')
+    
+    # Query for bar chart
+    query = "SELECT DATE(date), issue_category, COUNT(*) AS count FROM transcriptions WHERE issue_category IS NOT NULL GROUP BY DATE(date), issue_category"
+    df = pd.read_sql_query(query, conn)
+    df_pivot = df.pivot(index='DATE(date)', columns='issue_category', values='count').fillna(0)
+    
+    # Query for pie chart
+    cursor = conn.cursor()
+    cursor.execute('SELECT issue_category FROM transcriptions')
+    results = cursor.fetchall()
+    category_counts = {}
+    for result in results:
+        category = result[0]
+        category_counts[category] = category_counts.get(category, 0) + 1
+    
+    # Query for scatter plot
+    query_scatter = "SELECT DATE(date), issue_category FROM transcriptions WHERE issue_category IS NOT NULL"
+    df_scatter = pd.read_sql_query(query_scatter, conn)
+    
+    # Summary query for WordCloud
+    wordcloud_query = "SELECT summary FROM transcriptions WHERE summary IS NOT NULL"
+    summary_df = pd.read_sql_query(wordcloud_query, conn)
+    
+    # WordCloud
+    wordcloud = WordCloud(background_color='white', width=800, height=400).generate(' '.join(summary_df['summary']))
+
+    # Save WordCloud image to BytesIO object
+    img_array = np.array(wordcloud.to_image())
+    img_stream = BytesIO()
+
+    # Convert the NumPy array to a PIL Image and save it
+    Image.fromarray(img_array).save(img_stream, format='PNG')
+
+    # Close the database connection
+    conn.close()
+
+    # Create bar chart
+    fig_bar = px.bar(df_pivot, x=df_pivot.index, y=df_pivot.columns, barmode='stack')
+    fig_bar.update_layout(title='Number of Issues per Category per Day', xaxis_title='Date', yaxis_title='Number of Issues')
+
+    # Create pie chart
+    fig_pie = px.pie(names=list(category_counts.keys()), values=list(category_counts.values()), title='Distribution of Issue Categories')
+
+    # Create scatter plot
+    fig_scatter = px.scatter(df_scatter, x='DATE(date)', y='issue_category', title='Issues Scatter Plot')
+
+    # Create WordCloud
+    encoded_image = base64.b64encode(img_stream.getvalue()).decode()
+    fig_wordcloud = html.Img(src=f'data:image/png;base64,{encoded_image}', style={'width': '100%', 'height': '50%'})
+
+    # Convert the Plotly figures to Div
+    div = html.Div([
+        dcc.Graph(figure=fig_bar),
+        dcc.Graph(figure=fig_pie),
+        dcc.Graph(figure=fig_scatter),
+        fig_wordcloud
+    ])
+
+    return div
+
+
+
+
