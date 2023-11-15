@@ -86,6 +86,20 @@ kml_path = '../geobank/doc.kml'
 # Initial map creation without markers
 mymap = create_folium_map(geojson_path, buildings_geojson_path)
 
+# Navbar layout
+navbar = html.Nav(
+    children=[
+        html.Ul(
+            children=[
+                html.Li(html.A("Home", href="#")),
+                html.Li(html.A("About", href="#about")),
+            ],
+            style={"list-style-type": "none", "margin": 0, "padding": 0},
+        )
+    ],
+    style={"background-color": "#333", "padding": "10px"},
+)
+
 # Sidebar layout
 sidebar = html.Div(
     [
@@ -114,7 +128,8 @@ sidebar = html.Div(
 )
 # Main content layout
 content = html.Div(
-    [
+    [   
+        navbar,
         html.H1("A map showing Call Distribution over the Ahadi Konnect KCIS map."),
         html.Iframe(id="folium-map", srcDoc=mymap.get_root().render(), width="100%", height="600px", style={"border": "none"}),
         html.H1("Dashboard for Transcription Data"),
