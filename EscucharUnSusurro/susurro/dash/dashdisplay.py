@@ -129,10 +129,11 @@ sidebar = html.Div(
 # Main content layout
 content = html.Div(
     [   
-        navbar,
-        html.H1("A map showing Call Distribution over the Ahadi Konnect KCIS map."),
+        #navbar,
+        html.H1("Whisper Transcriptions Database Visualizations",style={'textAlign': 'center', 'color': '#503D36', 'font-size': 40}),
+        html.H2("A map showing Call Distribution over the Ahadi Konnect KCIS map."),
         html.Iframe(id="folium-map", srcDoc=mymap.get_root().render(), width="100%", height="600px", style={"border": "none"}),
-        html.H1("Dashboard for Transcription Data"),
+        html.H2("Dashboard for Transcription Data"),
         html.Div(id='plots-div'),
 
     ],
