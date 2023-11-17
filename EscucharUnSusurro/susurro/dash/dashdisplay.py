@@ -124,7 +124,7 @@ sidebar = html.Div(
             style={"margin-top": "10px"},
         ),
     ],
-    style={"position": "fixed", "top": 0, "left": 0, "width": "15%", "height": "100vh", "padding": "20px"},
+    style={"position": "fixed", "top": 0, "left": 0, "width": "15%", "height": "100vh", "padding": "20px", "background-color": "#D5D3CF"},
 )
 # Main content layout
 content = html.Div(
@@ -137,7 +137,7 @@ content = html.Div(
         html.Div(id='plots-div'),
 
     ],
-    style={"margin-left": "20%"},
+    style={"margin-left": "20%", "background-color": "#D5D3CF"},
 )
 
 app.layout = html.Div([sidebar, content])
