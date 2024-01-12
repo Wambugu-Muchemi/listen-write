@@ -61,6 +61,51 @@ EscucharUnSusurro is a powerful toolkit designed for audio transcription and in-
   - **Dynamic Application:** Silero VAD adapts dynamically to varying audio conditions, making it suitable for different environments and speech patterns.
 
   - **Usage Example:**
+
+    ```python
+    """
+      Args:
+      - audiopath: The path to the input audio file.
+
+      Returns:
+      - The path to the VAD-processed audio file.
+    """
+      SAMPLING_RATE = 16000
+      
+      try:
+          import librosa
+          audio, sr = librosa.load(audiopath, sr=None)
+      except Exception as e:
+          print(f"Error loading audio file: {e}")
+          return 'no silero'
+
+      if sr != SAMPLING_RATE:
+          print("Warning: Original audio samplerate differs from expected 16kHz.\n\tOriginal SamplingRate: ", sr)
+          audio = librosa.resample(audio, orig_sr=sr, target_sr=SAMPLING_RATE)
+
+      AUDIO_FILENAME = "temp_audio.wav"
+      librosa.output.write_wav(AUDIO_FILENAME, audio, SAMPLING_RATE)
+
+      try:
+          model, utils = torch.hub.load(repo_or_dir='snakers4/silero-vad', model='silero_vad', force_reload=True)
+          (get_speech_timestamps, save_audio, read_audio, VADIterator, collect_chunks) = utils
+
+          wav = read_audio(AUDIO_FILENAME, sampling_rate=SAMPLING_RATE)
+          
+          speech_timestamps = get_speech_timestamps(wav, model, sampling_rate=SAMPLING_RATE)
+          save_audio('only_speech.wav', collect_chunks(speech_timestamps, wav), sampling_rate=SAMPLING_RATE)
+          
+          return 'only_speech.wav'
+      except Exception as e:
+          print(f"Error processing audio with Silero VAD: {e}")
+          import os
+          if os.path.exists(AUDIO_FILENAME):
+              os.remove(AUDIO_FILENAME)
+          if os.path.exists('only_speech.wav'):
+              os.rename('only_speech.wav', 'no_silero.wav')
+          return 'no silero'
+    ```
+  OR
     ```python
     # Sample code for voice activity detection using Silero VAD
     from silero import Vad
@@ -89,6 +134,38 @@ EscucharUnSusurro is a powerful toolkit designed for audio transcription and in-
   - **Dynamic Duration Configuration:** Users can configure the duration of each segment based on their specific requirements. This flexibility allows adaptation to varying audio content and processing goals.
 
   - **Usage Example:**
+    ```python
+      from pydub import AudioSegment
+      import os
+
+      def split_audio(input_file, output_folder, segment_duration=25):
+          print("Segmenting...")
+          audio = AudioSegment.from_file(input_file)
+
+          # Calculate the number of segments
+          num_segments = len(audio) // (segment_duration * 1000)
+          print(f"{num_segments} segments found.")
+
+          for i in range(num_segments):
+              start_time = i * segment_duration * 1000
+              end_time = (i + 1) * segment_duration * 1000
+
+              # Extract the segment
+              segment = audio[start_time:end_time]
+
+              # Save the segment in WAV format
+              output_file = f"{output_folder}/segment_{i + 1}.wav"
+              segment.export(output_file, format="wav")
+              print(f"{output_file} processed.")
+
+          # Handle the last segment
+          last_segment = audio[num_segments * segment_duration * 1000:]
+          if len(last_segment) > 0:
+              output_file = f"{output_folder}/segment_{num_segments + 1}.wav"
+              last_segment.export(output_file, format="wav")
+    ```
+    Then
+    
     ```python
     # Sample code for audio segmentation
     from segmenter import split_audio
