@@ -7,4 +7,9 @@
 *.mp4
 *.webm
 *.pkl
+*.html
+*.geojson
+*.kmz
+*.br
+*.db
 /EscucharUnSusurro/susurro/geobank
