@@ -1,1 +1,13 @@
 .env
+*.mp3
+*.wav
+/env
+.env
+*.mp3
+*.wav
+*.flac
+*.ogg
+*.mp4
+*.webm
+*.pkl
+/home/wambugumuchemi/projects/listen-write/EscucharUnSusurro/susurro/geobank
