@@ -11,8 +11,8 @@ def consumeCompletedCalls():
 
     #define configuration
     conf = {
-        'bootstrap.servers': '105.29.165.253:29092', 
-        'group.id': 'Ahadi-Transcriber-ML',
+        'bootstrap.servers':"", #Enter Server address, 
+        'group.id': '',
         'auto.offset.reset': 'smallest',
         'broker.address.family': 'v4',
     

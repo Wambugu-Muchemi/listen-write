@@ -10,4 +10,8 @@
 *.mp4
 *.webm
 *.pkl
+*.html
+*.geojson
+*.kmz
+*.br
 /home/wambugumuchemi/projects/listen-write/EscucharUnSusurro/susurro/geobank
